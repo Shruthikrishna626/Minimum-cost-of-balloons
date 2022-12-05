@@ -1,0 +1,28 @@
+t=int(input())
+cost=list[map(int,input()),end=" "]
+#costp=int(input())
+participants=int(input())
+n=[]
+for i in range(0,participants):
+    a=[]
+    for j in range(2):
+        a.append(int(input()))
+    n.append(a)
+
+totcostg,totcostp=0,0
+for i in range(0,participants):
+    for j in range(0,i):
+        if n[i][j]==1 and n[i][j+1]==1:
+            g+=1
+            p+=1
+        elif n[i][j]==1 and n[i][j+1]==0:
+            g+=1
+        elif n[i][j]==0 and n[i][j]==1:
+            p+=1
+        else:
+            print("no one solved!!")
+
+totcostg=cost[0]*costg
+totcostp=cost[1]*costp
+print(totcostg,"\n",totcostp)
+     
